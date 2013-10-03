@@ -15,8 +15,8 @@ set cindent
 set statusline=%F%m%r%h%w\%=[ENC=%{&fileencoding}]\[LOW=%l/%L]
 set backspace=indent,eol,start
 set whichwrap=b,s,[,],,~
-set mouse=a
-set ttymouse=xterm2
+"set mouse=a
+"set ttymouse=xterm2
 set ignorecase
 set wildmenu
 set cursorline
