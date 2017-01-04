@@ -33,6 +33,8 @@ setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 autocmd FileType javascript setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+autocmd FileType markdown hi! def link markdownItalic LineNr
 
 augroup auto_comment_off
     autocmd!
@@ -46,7 +48,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 " Vundle本体
 Bundle 'sgur/vundle'
-" " 利用中のプラグインをBundle
+" 利用中のプラグインをBundle
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimshell'
@@ -61,7 +63,7 @@ Bundle 'TwitVim'
 Bundle 'thinca/vim-quickrun'
 let g:quickrun_config={'*': {'vsplit': ''}}
 
-"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 	" Disable AutoComplPop.
 	let g:acp_enableAtStartup = 0
 	" Use neocomplcache.

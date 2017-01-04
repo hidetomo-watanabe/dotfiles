@@ -33,9 +33,11 @@ setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 autocmd FileType javascript setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+autocmd FileType markdown hi! def link markdownItalic LineNr
 
 augroup auto_comment_off
-	autocmd!
-	autocmd BufEnter * setlocal formatoptions-=r
-	autocmd BufEnter * setlocal formatoptions-=o
+    autocmd!
+    autocmd BufEnter * setlocal formatoptions-=r
+    autocmd BufEnter * setlocal formatoptions-=o
 augroup END
