@@ -36,6 +36,7 @@ autocmd FileType javascript setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 autocmd FileType markdown hi! def link markdownItalic LineNr
 autocmd FileType markdown setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType shellscript setl tabstop=8 expandtab shiftwidth=2 softtabstop=2
 
 augroup auto_comment_off
     autocmd!
