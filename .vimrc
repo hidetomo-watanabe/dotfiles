@@ -9,14 +9,19 @@ set laststatus=2
 set statusline=%f\ [%{&fenc==''?&enc:&fenc}][%{&ff}]%=%8l:%c%8P
 set splitright
 set incsearch
+set autoindent
+set smartindent
+set expandtab
 set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set cindent
 " set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]
 set statusline=%F%m%r%h%w\%=[ENC=%{&fileencoding}]\[LOW=%l/%L]
 set backspace=indent,eol,start
 set whichwrap=b,s,[,],,~
-"set mouse=a
-"set ttymouse=xterm2
+" set mouse=a
+" set ttymouse=xterm2
 set ignorecase
 set wildmenu
 set cursorline
@@ -29,14 +34,10 @@ nnoremap <Down> gj
 nnoremap <Up> gk
 imap <C-j> <esc>
 
-setl autoindent
-autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
-autocmd FileType javascript setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType python setl cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 autocmd FileType markdown hi! def link markdownItalic LineNr
-autocmd FileType markdown setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
-autocmd FileType shellscript setl tabstop=8 expandtab shiftwidth=2 softtabstop=2
+autocmd FileType shellscript setl tabstop=2 shiftwidth=2 softtabstop=2
 
 augroup auto_comment_off
     autocmd!
