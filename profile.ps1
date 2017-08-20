@@ -27,3 +27,15 @@ function Prompt {
         return "> "
     }
 }
+# encoding
+function myenc
+{
+    if ($args.Length -eq 2)
+    {
+        cat -Encoding UTF8 $args[0] | Out-File $args[1] -Encoding default
+    }
+    else
+    {
+        echo '[ERROR] Set 2 filenames'
+    }
+}
