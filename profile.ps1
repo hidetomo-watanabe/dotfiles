@@ -6,14 +6,10 @@ Set-Alias cl clear
 Set-Alias vim '<PATH>\gvim.exe'
 # replace cd
 rm Alias:cd
-function cd
-{
-    if ($args.Length -gt 0)
-    {
+function cd {
+    if ($args.Length -gt 0) {
         Set-Location $args[0]
-    }
-    else
-    {
+    } else {
         Set-Location ~/
     }
 }
@@ -28,14 +24,10 @@ function Prompt {
     }
 }
 # encoding
-function myenc
-{
-    if ($args.Length -eq 2)
-    {
+function myenc {
+    if ($args.Length -eq 2) {
         cat -Encoding UTF8 $args[0] | Out-File $args[1] -Encoding default
-    }
-    else
-    {
+    } else {
         echo '[ERROR] Set 2 filenames'
     }
 }
