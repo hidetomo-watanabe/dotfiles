@@ -1,5 +1,6 @@
 ﻿# common
 Set-Alias grep Select-String
+Set-Alias open ii
 # vim
 Set-Alias vim '<PATH>\gvim.exe'
 # replace cd
