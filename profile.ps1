@@ -1,7 +1,7 @@
 ﻿# common
 Set-Alias grep Select-String
 # vim
-Set-Alias vim 'C:\Users\hidetomo_watanabe\Downloads\vim80-kaoriya-win64\gvim.exe'
+Set-Alias vim '<PATH>\gvim.exe'
 # replace cd
 rm Alias:cd
 function cd
