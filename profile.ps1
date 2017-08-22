@@ -13,6 +13,15 @@ function cd {
         Set-Location ~/
     }
 }
+# replace diff => add diff2
+# rm Alias:diff
+function diff2 {
+    if ($args.Length -eq 2) {
+        diff (cat $args[0]) (cat $args[1])
+    } else {
+        echo '[ERROR] Set 2 filenames'
+    }
+}
 # display location
 function Prompt {
     if ($?) {
