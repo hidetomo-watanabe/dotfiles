@@ -17,7 +17,7 @@ function cd {
 # rm Alias:diff
 function diff2 {
     if ($args.Length -eq 2) {
-        diff (cat $args[0]) (cat $args[1])
+        Compare-Object (cat $args[0]) (cat $args[1])
     } else {
         echo '[ERROR] Set 2 filenames'
     }
