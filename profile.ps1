@@ -22,6 +22,14 @@ function diff2 {
         echo '[ERROR] Set 2 filenames'
     }
 }
+# add wc
+function wc {
+    if ($args.Length -eq 1) {
+        (cat $args[0]).Length
+    } else {
+        echo '[ERROR] Set 1 filename'
+    }
+}
 # display location
 function Prompt {
     if ($?) {
