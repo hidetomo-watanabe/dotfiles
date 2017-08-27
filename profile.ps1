@@ -1,5 +1,4 @@
 ﻿# common
-chcp 65001
 Set-Alias grep Select-String
 Set-Alias open ii
 Set-Alias cl clear
