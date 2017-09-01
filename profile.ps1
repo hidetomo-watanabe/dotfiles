@@ -24,11 +24,11 @@ function diff2 {
 }
 # add wc
 function wc {
-    if ($args.Length -eq 1) {
-        (cat $args[0]).Length
-    } else {
-        echo '[ERROR] Set 1 filename'
+    $output = 0
+    foreach($d in $input){
+        $output += 1
     }
+    echo $output
 }
 # display location
 function Prompt {
