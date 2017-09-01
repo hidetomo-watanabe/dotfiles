@@ -30,6 +30,30 @@ function wc {
     }
     echo $output
 }
+# add head
+function head($limit=10) {
+    if ($limit -lt 1) {
+        return
+    }
+    $array = @($input)
+    foreach ($d in $array[0..($limit - 1)]) {
+        echo $d
+    }
+}
+# add tail
+function tail($limit=10) {
+    if ($limit -lt 1) {
+        return
+    }
+    $array = @($input)
+    $max = $array.length
+    if ($limit -gt ($max - 1)) {
+        $limit = $max
+    }
+    foreach ($d in $array[($max - $limit)..$max]) {
+        echo $d
+    }
+}
 # display location
 function Prompt {
     if ($?) {
