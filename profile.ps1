@@ -66,9 +66,13 @@ function Prompt {
 }
 # encoding
 function myenc {
-    if ($args.Length -eq 2) {
-        cat -Encoding UTF8 $args[0] | Out-File $args[1] -Encoding default
+    if ($args.Length -eq 4) {
+        if ($args[1] -eq 'default') {
+            cat $args[0] | Out-File $args[2] -Encoding $args[3]
+        } else {
+            cat -Encoding $args[1] $args[0] | Out-File $args[2] -Encoding $args[3]
+        }
     } else {
-        echo '[ERROR] Set 2 filenames'
+        echo '[ERROR] Set 2 filename and encoding pairs'
     }
 }
