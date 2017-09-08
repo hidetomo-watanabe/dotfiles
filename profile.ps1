@@ -1,5 +1,6 @@
 ﻿# common
 Set-Alias grep Select-String
+Set-Alias uniq Get-Unique
 Set-Alias open ii
 Set-Alias cl clear
 # vim
