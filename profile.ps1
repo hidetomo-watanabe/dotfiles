@@ -55,6 +55,27 @@ function tail($limit=10) {
         echo $d
     }
 }
+# add cut
+function cut($nums='1-', $delim=',') {
+    $array = @($input)
+    $tmp = $nums.Split('-')
+    $start = [int]($tmp[0])
+    if ($tmp[1] -eq '') {
+        $end = ($array[0].Split($delim)).length
+    } else {
+        $end = [int]$tmp[1]
+    }
+    foreach ($d in $array) {
+        $output = ''
+        for ($i = $start; $i -lt ($end+1); $i+=1) {
+            if ($i -ne $start) {
+                $output = $output + ','
+            }
+            $output = $output + ($d.Split($delim))[$i-1]
+        }
+        echo $output
+    }
+}
 # display location
 function Prompt {
     if ($?) {
