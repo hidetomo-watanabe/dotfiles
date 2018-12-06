@@ -12,5 +12,9 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 # 時計アイコンクリック時にOSやホスト名ipを表示する
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# デフォルトで隠しファイルを表示する
+defaults write com.apple.finder AppleShowAllFiles -bool true
+# ステータスバーを表示
+defaults write com.apple.finder ShowStatusBar -bool true
 # パスバーを表示
 defaults write com.apple.finder ShowPathbar -bool true
