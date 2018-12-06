@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $(uname) != "Darwin" ] ; then
+  echo "Not macOS!"
+  exit 1
+fi
+
+# スクロールバーの常時表示
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+# コンソールアプリケーションの画面サイズ変更を高速にする
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+# 時計アイコンクリック時にOSやホスト名ipを表示する
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# パスバーを表示
+defaults write com.apple.finder ShowPathbar -bool true
