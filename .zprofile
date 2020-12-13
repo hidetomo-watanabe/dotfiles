@@ -1,3 +1,4 @@
+# alias
 if [ "$(uname)" = 'Darwin' ]; then
   export LSCOLORS=gxfxcxdxbxegedabagacad
   alias ls='ls -Ga'
@@ -8,6 +9,7 @@ alias ll='ls -lht'
 alias grep='grep --color'
 alias df='df -h'
 
-PROMPT='%B[%n@%m %~]%b
- $ '
-source ~/.zshrc
+# select
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select

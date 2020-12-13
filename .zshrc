@@ -1,3 +1,8 @@
+# PROMPT
+PROMPT='%B[%n@%m %~]%b
+ $ '
+
+# RPROMPT
 # git ブランチ名を色付きで表示させるメソッド
 function rprompt-git-current-branch {
   local branch_name st branch_status
