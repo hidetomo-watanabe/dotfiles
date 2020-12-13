@@ -8,4 +8,6 @@ alias ll='ls -lht'
 alias grep='grep --color'
 alias df='df -h'
 
+PROMPT='%B[%n@%m %~]%b
+ $ '
 source ~/.zshrc
