@@ -1,5 +1,5 @@
 set nocompatible
-colorscheme darkblue
+" colorscheme darkblue
 syntax on
 set number
 set clipboard=unnamed,autoselect
