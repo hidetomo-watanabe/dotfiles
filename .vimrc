@@ -2,6 +2,7 @@ set nocompatible
 " colorscheme darkblue
 syntax on
 set number
+set list
 set clipboard=unnamed,autoselect
 set showmatch
 set fileencodings=ja_JP,utf-8,iso-2022-jp,cp932,euc-jp
