@@ -1,5 +1,5 @@
 set nocompatible
-" colorscheme darkblue
+colorscheme elflord
 syntax on
 set number
 set list
